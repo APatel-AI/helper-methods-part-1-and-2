@@ -1,6 +1,6 @@
 <h1>New movie</h1>
 
-<% @the_movie.errors.full_messages.each do |message| %>
+<% @movie.errors.full_messages.each do |message| %>
   <p style="color: red;"><%= message %></p>
 <% end %>
 
@@ -12,7 +12,7 @@
       Title
     </label>
 
-    <input type="text" id="title_box" name="query_title" value="<%= @the_movie.title %>">
+    <input type="text" id="title_box" name="query_title" value="<%= @movie.title %>">
   </div>
 
   <div>
@@ -20,7 +20,7 @@
       Description
     </label>
 
-    <textarea id="description_box" name="query_description" rows="3"><%= @the_movie.description %></textarea>
+    <textarea id="description_box" name="query_description" rows="3"><%= @movie.description %></textarea>
   </div>
 
   <button>
